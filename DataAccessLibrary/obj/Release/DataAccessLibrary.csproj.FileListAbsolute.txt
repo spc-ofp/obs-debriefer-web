@@ -1,0 +1,17 @@
+C:\Users\coreyc\documents\visual studio 2010\Projects\DebrieferWeb\DataAccessLibrary\bin\Release\DebrieferDal.dll.config
+C:\Users\coreyc\documents\visual studio 2010\Projects\DebrieferWeb\DataAccessLibrary\bin\Release\DebrieferDal.dll
+C:\Users\coreyc\documents\visual studio 2010\Projects\DebrieferWeb\DataAccessLibrary\bin\Release\DebrieferDal.pdb
+C:\Users\coreyc\documents\visual studio 2010\Projects\DebrieferWeb\DataAccessLibrary\bin\Release\FluentNHibernate.dll
+C:\Users\coreyc\documents\visual studio 2010\Projects\DebrieferWeb\DataAccessLibrary\bin\Release\Iesi.Collections.dll
+C:\Users\coreyc\documents\visual studio 2010\Projects\DebrieferWeb\DataAccessLibrary\bin\Release\NHibernate.dll
+C:\Users\coreyc\documents\visual studio 2010\Projects\DebrieferWeb\DataAccessLibrary\bin\Release\nunit.framework.dll
+C:\Users\coreyc\documents\visual studio 2010\Projects\DebrieferWeb\DataAccessLibrary\bin\Release\FluentNHibernate.pdb
+C:\Users\coreyc\documents\visual studio 2010\Projects\DebrieferWeb\DataAccessLibrary\bin\Release\Iesi.Collections.xml
+C:\Users\coreyc\documents\visual studio 2010\Projects\DebrieferWeb\DataAccessLibrary\bin\Release\NHibernate.xml
+C:\Users\coreyc\documents\visual studio 2010\Projects\DebrieferWeb\DataAccessLibrary\bin\Release\nunit.framework.xml
+C:\Users\coreyc\documents\visual studio 2010\Projects\DebrieferWeb\DataAccessLibrary\obj\Release\ResolveAssemblyReference.cache
+C:\Users\coreyc\documents\visual studio 2010\Projects\DebrieferWeb\DataAccessLibrary\obj\Release\Spc.Ofp.Debriefer.Dal.FieldNames.resources
+C:\Users\coreyc\documents\visual studio 2010\Projects\DebrieferWeb\DataAccessLibrary\obj\Release\GenerateResource.read.1.tlog
+C:\Users\coreyc\documents\visual studio 2010\Projects\DebrieferWeb\DataAccessLibrary\obj\Release\GenerateResource.write.1.tlog
+C:\Users\coreyc\documents\visual studio 2010\Projects\DebrieferWeb\DataAccessLibrary\obj\Release\DebrieferDal.dll
+C:\Users\coreyc\documents\visual studio 2010\Projects\DebrieferWeb\DataAccessLibrary\obj\Release\DebrieferDal.pdb

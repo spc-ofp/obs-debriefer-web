@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLibrary", "DataAccessLibrary\DataAccessLibrary.csproj", "{9E4C48C6-C0C6-4514-9278-64097A95B326}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebUI", "WebUI\WebUI.csproj", "{432C30BE-4248-459A-97E5-F686B897AC60}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9E4C48C6-C0C6-4514-9278-64097A95B326}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{9E4C48C6-C0C6-4514-9278-64097A95B326}.Debug|Any CPU.Build.0 = Release|Any CPU
+		{9E4C48C6-C0C6-4514-9278-64097A95B326}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E4C48C6-C0C6-4514-9278-64097A95B326}.Release|Any CPU.Build.0 = Release|Any CPU
+		{432C30BE-4248-459A-97E5-F686B897AC60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{432C30BE-4248-459A-97E5-F686B897AC60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{432C30BE-4248-459A-97E5-F686B897AC60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{432C30BE-4248-459A-97E5-F686B897AC60}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

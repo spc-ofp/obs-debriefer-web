@@ -1,0 +1,18 @@
+﻿@model System.Web.Mvc.ModelStateDictionary
+
+@*  Per this StackOverflow:  http://stackoverflow.com/questions/5857851/custom-validationsummary-template-asp-net-mvc-3 *@
+@*  Use like this:  @Html.RenderPartial("ValidationSummary", @ViewData.ModelState) *@
+@* TODO Use better CSS *@
+@if(!Model.IsValid)
+{
+<div class="validation-summary-errors">
+<ul>
+@foreach (KeyValuePair<string, ModelState> keyValuePair in Model)
+{
+    foreach(ModelError modelError in keyValuePair.Value.Errors){
+        <li>@modelError.ErrorMessage</li>
+    }
+}
+</ul>
+</div>
+}

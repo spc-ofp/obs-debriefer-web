@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VisualState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ShowCheckBoxes="false">
+  <TopNode>[0-1016]C:\Users\coreyc\Documents\Visual Studio 2010\Projects\DebrieferWeb\DataAccessLibrary\bin\Release\DebrieferDal.dll</TopNode>
+  <SelectedNode>[0-1004]Spc.Ofp.Debriefer.Dal.Tests.DebriefingTest.TestLongLineDebriefing</SelectedNode>
+  <ExcludeCategories>false</ExcludeCategories>
+  <Nodes>
+    <Node UniqueName="[0-1016]C:\Users\coreyc\Documents\Visual Studio 2010\Projects\DebrieferWeb\DataAccessLibrary\bin\Release\DebrieferDal.dll" Expanded="true" />
+    <Node UniqueName="[0-1017]Spc" Expanded="true" />
+    <Node UniqueName="[0-1018]Spc.Ofp" Expanded="true" />
+    <Node UniqueName="[0-1019]Spc.Ofp.Debriefer" Expanded="true" />
+    <Node UniqueName="[0-1020]Spc.Ofp.Debriefer.Dal" Expanded="true" />
+    <Node UniqueName="[0-1021]Spc.Ofp.Debriefer.Dal.Tests" Expanded="true" />
+    <Node UniqueName="[0-1000]Spc.Ofp.Debriefer.Dal.Tests.CategoryTest" Expanded="true" />
+    <Node UniqueName="[0-1002]Spc.Ofp.Debriefer.Dal.Tests.DebriefingTest" Expanded="true" />
+    <Node UniqueName="[0-1005]Spc.Ofp.Debriefer.Dal.Tests.FieldStaffTest" Expanded="true" />
+    <Node UniqueName="[0-1014]Spc.Ofp.Debriefer.Dal.Tests.PortTest" Expanded="true" />
+    <Node UniqueName="[0-1010]Spc.Ofp.Debriefer.Dal.Tests.QuestionTest" Expanded="true" />
+    <Node UniqueName="[0-1008]Spc.Ofp.Debriefer.Dal.Tests.VesselTest" Expanded="true" />
+  </Nodes>
+</VisualState>

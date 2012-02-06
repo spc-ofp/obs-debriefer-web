@@ -1,0 +1,99 @@
+﻿@model IEnumerable<WebUI.Models.DebriefingHeaderViewModel>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("table > tbody tr:odd").css("background-color", "#FFFFCC");
+    });
+</script>
+
+<h2>@ViewBag.Title</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th></th>
+        <th>
+            Trip Number
+        </th>
+        <th>
+            Vessel
+        </th>
+        <th>
+            Departure Date
+        </th>
+        <th>
+            Return Date
+        </th>
+        <th>
+            Debriefer
+        </th>
+        <th>
+            Debrief Start
+        </th>
+        <th>
+            Debrief End
+        </th>
+        <th>
+            Status
+        </th>
+        <th>
+            Country Code
+        </th>
+        <th>
+            Entered By
+        </th>
+        <th>
+            Entered Date
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @* If the debrief status is 'Complete', don't allow editing *@
+            @if (!"Complete".Equals(item.Status, StringComparison.InvariantCultureIgnoreCase))
+            {
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id })<text> | </text>
+            }
+            @Html.ActionLink("Details", "Details", new { id=item.Id })
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ObserverCode) /
+            @Html.DisplayFor(modelItem => item.TripNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VesselName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DepartureDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReturnDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DebrieferCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StartTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EndTime, new { format = "t" })
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CountryCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EnteredBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EnteredDate)
+        </td>
+    </tr>
+}
+
+</table>

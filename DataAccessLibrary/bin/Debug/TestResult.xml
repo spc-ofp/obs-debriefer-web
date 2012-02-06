@@ -1,0 +1,378 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="C:\Users\coreyc\Documents\Visual Studio 2010\Projects\DebrieferWeb\DataAccessLibrary\bin\Debug\DebrieferDal.dll" total="9" errors="0" failures="9" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2012-01-24" time="09:33:40">
+  <environment nunit-version="2.5.10.11092" clr-version="4.0.30319.239" os-version="Microsoft Windows NT 6.1.7601 Service Pack 1" platform="Win32NT" cwd="C:\opt\NUnit-2.5.10\bin\net-2.0" machine-name="SPC112089" user="coreyc" user-domain="NOUMEA" />
+  <culture-info current-culture="en-AU" current-uiculture="en-US" />
+  <test-suite type="Assembly" name="C:\Users\coreyc\Documents\Visual Studio 2010\Projects\DebrieferWeb\DataAccessLibrary\bin\Debug\DebrieferDal.dll" executed="True" result="Failure" success="False" time="3.552" asserts="0">
+    <results>
+      <test-suite type="Namespace" name="Spc" executed="True" result="Failure" success="False" time="3.537" asserts="0">
+        <results>
+          <test-suite type="Namespace" name="Ofp" executed="True" result="Failure" success="False" time="3.537" asserts="0">
+            <results>
+              <test-suite type="Namespace" name="Debriefer" executed="True" result="Failure" success="False" time="3.537" asserts="0">
+                <results>
+                  <test-suite type="Namespace" name="Dal" executed="True" result="Failure" success="False" time="3.537" asserts="0">
+                    <results>
+                      <test-suite type="Namespace" name="Tests" executed="True" result="Failure" success="False" time="3.537" asserts="0">
+                        <results>
+                          <test-suite type="TestFixture" name="CategoryTest" executed="True" result="Error" success="False" time="3.209" asserts="0">
+                            <failure>
+                              <message><![CDATA[SetUp : FluentNHibernate.Cfg.FluentConfigurationException : An invalid or incomplete configuration was used while creating a SessionFactory. Check PotentialReasons collection, and InnerException for more detail.
+
+
+  ----> FluentNHibernate.Cfg.FluentConfigurationException : An invalid or incomplete configuration was used while creating a SessionFactory. Check PotentialReasons collection, and InnerException for more detail.
+
+
+  ----> NHibernate.MappingException : Could not compile the mapping document: (XmlDocument)
+  ----> NHibernate.MappingException : persistent class Spc.Ofp.Debriefer.Dal.Entities.Category, DebrieferDal, Version=1.0.0.0, Culture=en, PublicKeyToken=null not found
+  ----> System.IO.FileNotFoundException : Could not load file or assembly 'DebrieferDal, Version=1.0.0.0, Culture=en, PublicKeyToken=null' or one of its dependencies. The system cannot find the file specified.]]></message>
+                              <stack-trace><![CDATA[at FluentNHibernate.Cfg.FluentConfiguration.BuildSessionFactory() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 235
+at Spc.Ofp.Debriefer.Dal.DebriefDataService.CreateSessionFactory() in c:\users\coreyc\documents\visual studio 2010\Projects\DebrieferWeb\DataAccessLibrary\DebriefDataService.cs:line 96
+at Spc.Ofp.Debriefer.Dal.DebriefDataService.get_SessionFactory() in c:\users\coreyc\documents\visual studio 2010\Projects\DebrieferWeb\DataAccessLibrary\DebriefDataService.cs:line 46
+at Spc.Ofp.Debriefer.Dal.DebriefDataService.GetSession() in c:\users\coreyc\documents\visual studio 2010\Projects\DebrieferWeb\DataAccessLibrary\DebriefDataService.cs:line 52
+at Spc.Ofp.Debriefer.Dal.Tests.BaseTest.Init() in C:\Users\coreyc\Documents\Visual Studio 2010\Projects\DebrieferWeb\DataAccessLibrary\Tests\BaseTest.cs:line 35
+--FluentConfigurationException
+at FluentNHibernate.Cfg.FluentConfiguration.BuildConfiguration() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 264
+at FluentNHibernate.Cfg.FluentConfiguration.BuildSessionFactory() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 230
+--MappingException
+at NHibernate.Cfg.Configuration.LogAndThrow(Exception exception)
+at NHibernate.Cfg.Configuration.AddDeserializedMapping(HbmMapping mappingDocument, String documentFileName)
+at NHibernate.Cfg.Configuration.ProcessMappingsQueue()
+at NHibernate.Cfg.Configuration.AddInputStream(Stream xmlInputStream, String name)
+at NHibernate.Cfg.Configuration.AddDocument(XmlDocument doc, String name)
+at NHibernate.Cfg.Configuration.AddDocument(XmlDocument doc)
+at FluentNHibernate.PersistenceModel.Configure(Configuration cfg) in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 289
+at FluentNHibernate.Cfg.MappingConfiguration.Apply(Configuration cfg) in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\MappingConfiguration.cs:line 87
+at FluentNHibernate.Cfg.FluentConfiguration.BuildConfiguration() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 249
+--MappingException
+at NHibernate.Cfg.XmlHbmBinding.Binder.ClassForFullNameChecked(String fullName, String errorMessage)
+at NHibernate.Cfg.XmlHbmBinding.ClassBinder.BindClass(IEntityMapping classMapping, PersistentClass model, IDictionary`2 inheritedMetas)
+at NHibernate.Cfg.XmlHbmBinding.RootClassBinder.Bind(HbmClass classSchema, IDictionary`2 inheritedMetas)
+at NHibernate.Cfg.XmlHbmBinding.MappingRootBinder.AddEntitiesMappings(HbmMapping mappingSchema, IDictionary`2 inheritedMetas)
+at NHibernate.Cfg.XmlHbmBinding.MappingRootBinder.Bind(HbmMapping mappingSchema)
+at NHibernate.Cfg.Configuration.AddDeserializedMapping(HbmMapping mappingDocument, String documentFileName)
+--FileNotFoundException
+at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+at System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection, Boolean suppressSecurityChecks)
+at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+at System.Reflection.Assembly.Load(String assemblyString)
+at NHibernate.Util.ReflectHelper.TypeFromAssembly(AssemblyQualifiedTypeName name, Boolean throwOnError)
+at NHibernate.Cfg.XmlHbmBinding.Binder.ClassForFullNameChecked(String fullName, String errorMessage)
+]]></stack-trace>
+                            </failure>
+                            <results>
+                              <test-case name="Spc.Ofp.Debriefer.Dal.Tests.CategoryTest.TestGetCategory" executed="True" result="Failure" success="False" time="0.000" asserts="0">
+                                <failure>
+                                  <message><![CDATA[TestFixtureSetUp failed in CategoryTest]]></message>
+                                  <stack-trace />
+                                </failure>
+                              </test-case>
+                            </results>
+                          </test-suite>
+                          <test-suite type="TestFixture" name="DebriefingTest" executed="True" result="Error" success="False" time="0.047" asserts="0">
+                            <failure>
+                              <message><![CDATA[SetUp : FluentNHibernate.Cfg.FluentConfigurationException : An invalid or incomplete configuration was used while creating a SessionFactory. Check PotentialReasons collection, and InnerException for more detail.
+
+
+  ----> FluentNHibernate.Cfg.FluentConfigurationException : An invalid or incomplete configuration was used while creating a SessionFactory. Check PotentialReasons collection, and InnerException for more detail.
+
+
+  ----> NHibernate.MappingException : Could not compile the mapping document: (XmlDocument)
+  ----> NHibernate.MappingException : persistent class Spc.Ofp.Debriefer.Dal.Entities.Category, DebrieferDal, Version=1.0.0.0, Culture=en, PublicKeyToken=null not found
+  ----> System.IO.FileNotFoundException : Could not load file or assembly 'DebrieferDal, Version=1.0.0.0, Culture=en, PublicKeyToken=null' or one of its dependencies. The system cannot find the file specified.]]></message>
+                              <stack-trace><![CDATA[at FluentNHibernate.Cfg.FluentConfiguration.BuildSessionFactory() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 235
+at Spc.Ofp.Debriefer.Dal.DebriefDataService.CreateSessionFactory() in c:\users\coreyc\documents\visual studio 2010\Projects\DebrieferWeb\DataAccessLibrary\DebriefDataService.cs:line 96
+at Spc.Ofp.Debriefer.Dal.DebriefDataService.get_SessionFactory() in c:\users\coreyc\documents\visual studio 2010\Projects\DebrieferWeb\DataAccessLibrary\DebriefDataService.cs:line 46
+at Spc.Ofp.Debriefer.Dal.DebriefDataService.GetSession() in c:\users\coreyc\documents\visual studio 2010\Projects\DebrieferWeb\DataAccessLibrary\DebriefDataService.cs:line 52
+at Spc.Ofp.Debriefer.Dal.Tests.BaseTest.Init() in C:\Users\coreyc\Documents\Visual Studio 2010\Projects\DebrieferWeb\DataAccessLibrary\Tests\BaseTest.cs:line 35
+--FluentConfigurationException
+at FluentNHibernate.Cfg.FluentConfiguration.BuildConfiguration() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 264
+at FluentNHibernate.Cfg.FluentConfiguration.BuildSessionFactory() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 230
+--MappingException
+at NHibernate.Cfg.Configuration.LogAndThrow(Exception exception)
+at NHibernate.Cfg.Configuration.AddDeserializedMapping(HbmMapping mappingDocument, String documentFileName)
+at NHibernate.Cfg.Configuration.ProcessMappingsQueue()
+at NHibernate.Cfg.Configuration.AddInputStream(Stream xmlInputStream, String name)
+at NHibernate.Cfg.Configuration.AddDocument(XmlDocument doc, String name)
+at NHibernate.Cfg.Configuration.AddDocument(XmlDocument doc)
+at FluentNHibernate.PersistenceModel.Configure(Configuration cfg) in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 289
+at FluentNHibernate.Cfg.MappingConfiguration.Apply(Configuration cfg) in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\MappingConfiguration.cs:line 87
+at FluentNHibernate.Cfg.FluentConfiguration.BuildConfiguration() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 249
+--MappingException
+at NHibernate.Cfg.XmlHbmBinding.Binder.ClassForFullNameChecked(String fullName, String errorMessage)
+at NHibernate.Cfg.XmlHbmBinding.ClassBinder.BindClass(IEntityMapping classMapping, PersistentClass model, IDictionary`2 inheritedMetas)
+at NHibernate.Cfg.XmlHbmBinding.RootClassBinder.Bind(HbmClass classSchema, IDictionary`2 inheritedMetas)
+at NHibernate.Cfg.XmlHbmBinding.MappingRootBinder.AddEntitiesMappings(HbmMapping mappingSchema, IDictionary`2 inheritedMetas)
+at NHibernate.Cfg.XmlHbmBinding.MappingRootBinder.Bind(HbmMapping mappingSchema)
+at NHibernate.Cfg.Configuration.AddDeserializedMapping(HbmMapping mappingDocument, String documentFileName)
+--FileNotFoundException
+at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+at System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection, Boolean suppressSecurityChecks)
+at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+at System.Reflection.Assembly.Load(String assemblyString)
+at NHibernate.Util.ReflectHelper.TypeFromAssembly(AssemblyQualifiedTypeName name, Boolean throwOnError)
+at NHibernate.Cfg.XmlHbmBinding.Binder.ClassForFullNameChecked(String fullName, String errorMessage)
+]]></stack-trace>
+                            </failure>
+                            <results>
+                              <test-case name="Spc.Ofp.Debriefer.Dal.Tests.DebriefingTest.TestGetDebriefing" executed="True" result="Failure" success="False" time="0.000" asserts="0">
+                                <failure>
+                                  <message><![CDATA[TestFixtureSetUp failed in DebriefingTest]]></message>
+                                  <stack-trace />
+                                </failure>
+                              </test-case>
+                            </results>
+                          </test-suite>
+                          <test-suite type="TestFixture" name="FieldStaffTest" executed="True" result="Error" success="False" time="0.047" asserts="0">
+                            <failure>
+                              <message><![CDATA[SetUp : FluentNHibernate.Cfg.FluentConfigurationException : An invalid or incomplete configuration was used while creating a SessionFactory. Check PotentialReasons collection, and InnerException for more detail.
+
+
+  ----> FluentNHibernate.Cfg.FluentConfigurationException : An invalid or incomplete configuration was used while creating a SessionFactory. Check PotentialReasons collection, and InnerException for more detail.
+
+
+  ----> NHibernate.MappingException : Could not compile the mapping document: (XmlDocument)
+  ----> NHibernate.MappingException : persistent class Spc.Ofp.Debriefer.Dal.Entities.Category, DebrieferDal, Version=1.0.0.0, Culture=en, PublicKeyToken=null not found
+  ----> System.IO.FileNotFoundException : Could not load file or assembly 'DebrieferDal, Version=1.0.0.0, Culture=en, PublicKeyToken=null' or one of its dependencies. The system cannot find the file specified.]]></message>
+                              <stack-trace><![CDATA[at FluentNHibernate.Cfg.FluentConfiguration.BuildSessionFactory() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 235
+at Spc.Ofp.Debriefer.Dal.DebriefDataService.CreateSessionFactory() in c:\users\coreyc\documents\visual studio 2010\Projects\DebrieferWeb\DataAccessLibrary\DebriefDataService.cs:line 96
+at Spc.Ofp.Debriefer.Dal.DebriefDataService.get_SessionFactory() in c:\users\coreyc\documents\visual studio 2010\Projects\DebrieferWeb\DataAccessLibrary\DebriefDataService.cs:line 46
+at Spc.Ofp.Debriefer.Dal.DebriefDataService.GetSession() in c:\users\coreyc\documents\visual studio 2010\Projects\DebrieferWeb\DataAccessLibrary\DebriefDataService.cs:line 52
+at Spc.Ofp.Debriefer.Dal.Tests.BaseTest.Init() in C:\Users\coreyc\Documents\Visual Studio 2010\Projects\DebrieferWeb\DataAccessLibrary\Tests\BaseTest.cs:line 35
+--FluentConfigurationException
+at FluentNHibernate.Cfg.FluentConfiguration.BuildConfiguration() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 264
+at FluentNHibernate.Cfg.FluentConfiguration.BuildSessionFactory() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 230
+--MappingException
+at NHibernate.Cfg.Configuration.LogAndThrow(Exception exception)
+at NHibernate.Cfg.Configuration.AddDeserializedMapping(HbmMapping mappingDocument, String documentFileName)
+at NHibernate.Cfg.Configuration.ProcessMappingsQueue()
+at NHibernate.Cfg.Configuration.AddInputStream(Stream xmlInputStream, String name)
+at NHibernate.Cfg.Configuration.AddDocument(XmlDocument doc, String name)
+at NHibernate.Cfg.Configuration.AddDocument(XmlDocument doc)
+at FluentNHibernate.PersistenceModel.Configure(Configuration cfg) in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 289
+at FluentNHibernate.Cfg.MappingConfiguration.Apply(Configuration cfg) in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\MappingConfiguration.cs:line 87
+at FluentNHibernate.Cfg.FluentConfiguration.BuildConfiguration() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 249
+--MappingException
+at NHibernate.Cfg.XmlHbmBinding.Binder.ClassForFullNameChecked(String fullName, String errorMessage)
+at NHibernate.Cfg.XmlHbmBinding.ClassBinder.BindClass(IEntityMapping classMapping, PersistentClass model, IDictionary`2 inheritedMetas)
+at NHibernate.Cfg.XmlHbmBinding.RootClassBinder.Bind(HbmClass classSchema, IDictionary`2 inheritedMetas)
+at NHibernate.Cfg.XmlHbmBinding.MappingRootBinder.AddEntitiesMappings(HbmMapping mappingSchema, IDictionary`2 inheritedMetas)
+at NHibernate.Cfg.XmlHbmBinding.MappingRootBinder.Bind(HbmMapping mappingSchema)
+at NHibernate.Cfg.Configuration.AddDeserializedMapping(HbmMapping mappingDocument, String documentFileName)
+--FileNotFoundException
+at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+at System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection, Boolean suppressSecurityChecks)
+at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+at System.Reflection.Assembly.Load(String assemblyString)
+at NHibernate.Util.ReflectHelper.TypeFromAssembly(AssemblyQualifiedTypeName name, Boolean throwOnError)
+at NHibernate.Cfg.XmlHbmBinding.Binder.ClassForFullNameChecked(String fullName, String errorMessage)
+]]></stack-trace>
+                            </failure>
+                            <results>
+                              <test-case name="Spc.Ofp.Debriefer.Dal.Tests.FieldStaffTest.TestGetDebriefer" executed="True" result="Failure" success="False" time="0.000" asserts="0">
+                                <failure>
+                                  <message><![CDATA[TestFixtureSetUp failed in FieldStaffTest]]></message>
+                                  <stack-trace />
+                                </failure>
+                              </test-case>
+                              <test-case name="Spc.Ofp.Debriefer.Dal.Tests.FieldStaffTest.TestGetObserver" executed="True" result="Failure" success="False" time="0.000" asserts="0">
+                                <failure>
+                                  <message><![CDATA[TestFixtureSetUp failed in FieldStaffTest]]></message>
+                                  <stack-trace />
+                                </failure>
+                              </test-case>
+                            </results>
+                          </test-suite>
+                          <test-suite type="TestFixture" name="PortTest" executed="True" result="Error" success="False" time="0.031" asserts="0">
+                            <failure>
+                              <message><![CDATA[SetUp : FluentNHibernate.Cfg.FluentConfigurationException : An invalid or incomplete configuration was used while creating a SessionFactory. Check PotentialReasons collection, and InnerException for more detail.
+
+
+  ----> FluentNHibernate.Cfg.FluentConfigurationException : An invalid or incomplete configuration was used while creating a SessionFactory. Check PotentialReasons collection, and InnerException for more detail.
+
+
+  ----> NHibernate.MappingException : Could not compile the mapping document: (XmlDocument)
+  ----> NHibernate.MappingException : persistent class Spc.Ofp.Debriefer.Dal.Entities.Category, DebrieferDal, Version=1.0.0.0, Culture=en, PublicKeyToken=null not found
+  ----> System.IO.FileNotFoundException : Could not load file or assembly 'DebrieferDal, Version=1.0.0.0, Culture=en, PublicKeyToken=null' or one of its dependencies. The system cannot find the file specified.]]></message>
+                              <stack-trace><![CDATA[at FluentNHibernate.Cfg.FluentConfiguration.BuildSessionFactory() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 235
+at Spc.Ofp.Debriefer.Dal.DebriefDataService.CreateSessionFactory() in c:\users\coreyc\documents\visual studio 2010\Projects\DebrieferWeb\DataAccessLibrary\DebriefDataService.cs:line 96
+at Spc.Ofp.Debriefer.Dal.DebriefDataService.get_SessionFactory() in c:\users\coreyc\documents\visual studio 2010\Projects\DebrieferWeb\DataAccessLibrary\DebriefDataService.cs:line 46
+at Spc.Ofp.Debriefer.Dal.DebriefDataService.GetSession() in c:\users\coreyc\documents\visual studio 2010\Projects\DebrieferWeb\DataAccessLibrary\DebriefDataService.cs:line 52
+at Spc.Ofp.Debriefer.Dal.Tests.BaseTest.Init() in C:\Users\coreyc\Documents\Visual Studio 2010\Projects\DebrieferWeb\DataAccessLibrary\Tests\BaseTest.cs:line 35
+--FluentConfigurationException
+at FluentNHibernate.Cfg.FluentConfiguration.BuildConfiguration() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 264
+at FluentNHibernate.Cfg.FluentConfiguration.BuildSessionFactory() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 230
+--MappingException
+at NHibernate.Cfg.Configuration.LogAndThrow(Exception exception)
+at NHibernate.Cfg.Configuration.AddDeserializedMapping(HbmMapping mappingDocument, String documentFileName)
+at NHibernate.Cfg.Configuration.ProcessMappingsQueue()
+at NHibernate.Cfg.Configuration.AddInputStream(Stream xmlInputStream, String name)
+at NHibernate.Cfg.Configuration.AddDocument(XmlDocument doc, String name)
+at NHibernate.Cfg.Configuration.AddDocument(XmlDocument doc)
+at FluentNHibernate.PersistenceModel.Configure(Configuration cfg) in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 289
+at FluentNHibernate.Cfg.MappingConfiguration.Apply(Configuration cfg) in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\MappingConfiguration.cs:line 87
+at FluentNHibernate.Cfg.FluentConfiguration.BuildConfiguration() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 249
+--MappingException
+at NHibernate.Cfg.XmlHbmBinding.Binder.ClassForFullNameChecked(String fullName, String errorMessage)
+at NHibernate.Cfg.XmlHbmBinding.ClassBinder.BindClass(IEntityMapping classMapping, PersistentClass model, IDictionary`2 inheritedMetas)
+at NHibernate.Cfg.XmlHbmBinding.RootClassBinder.Bind(HbmClass classSchema, IDictionary`2 inheritedMetas)
+at NHibernate.Cfg.XmlHbmBinding.MappingRootBinder.AddEntitiesMappings(HbmMapping mappingSchema, IDictionary`2 inheritedMetas)
+at NHibernate.Cfg.XmlHbmBinding.MappingRootBinder.Bind(HbmMapping mappingSchema)
+at NHibernate.Cfg.Configuration.AddDeserializedMapping(HbmMapping mappingDocument, String documentFileName)
+--FileNotFoundException
+at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+at System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection, Boolean suppressSecurityChecks)
+at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+at System.Reflection.Assembly.Load(String assemblyString)
+at NHibernate.Util.ReflectHelper.TypeFromAssembly(AssemblyQualifiedTypeName name, Boolean throwOnError)
+at NHibernate.Cfg.XmlHbmBinding.Binder.ClassForFullNameChecked(String fullName, String errorMessage)
+]]></stack-trace>
+                            </failure>
+                            <results>
+                              <test-case name="Spc.Ofp.Debriefer.Dal.Tests.PortTest.TestGetPort" executed="True" result="Failure" success="False" time="0.000" asserts="0">
+                                <failure>
+                                  <message><![CDATA[TestFixtureSetUp failed in PortTest]]></message>
+                                  <stack-trace />
+                                </failure>
+                              </test-case>
+                            </results>
+                          </test-suite>
+                          <test-suite type="TestFixture" name="QuestionTest" executed="True" result="Error" success="False" time="0.031" asserts="0">
+                            <failure>
+                              <message><![CDATA[SetUp : FluentNHibernate.Cfg.FluentConfigurationException : An invalid or incomplete configuration was used while creating a SessionFactory. Check PotentialReasons collection, and InnerException for more detail.
+
+
+  ----> FluentNHibernate.Cfg.FluentConfigurationException : An invalid or incomplete configuration was used while creating a SessionFactory. Check PotentialReasons collection, and InnerException for more detail.
+
+
+  ----> NHibernate.MappingException : Could not compile the mapping document: (XmlDocument)
+  ----> NHibernate.MappingException : persistent class Spc.Ofp.Debriefer.Dal.Entities.Category, DebrieferDal, Version=1.0.0.0, Culture=en, PublicKeyToken=null not found
+  ----> System.IO.FileNotFoundException : Could not load file or assembly 'DebrieferDal, Version=1.0.0.0, Culture=en, PublicKeyToken=null' or one of its dependencies. The system cannot find the file specified.]]></message>
+                              <stack-trace><![CDATA[at FluentNHibernate.Cfg.FluentConfiguration.BuildSessionFactory() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 235
+at Spc.Ofp.Debriefer.Dal.DebriefDataService.CreateSessionFactory() in c:\users\coreyc\documents\visual studio 2010\Projects\DebrieferWeb\DataAccessLibrary\DebriefDataService.cs:line 96
+at Spc.Ofp.Debriefer.Dal.DebriefDataService.get_SessionFactory() in c:\users\coreyc\documents\visual studio 2010\Projects\DebrieferWeb\DataAccessLibrary\DebriefDataService.cs:line 46
+at Spc.Ofp.Debriefer.Dal.DebriefDataService.GetSession() in c:\users\coreyc\documents\visual studio 2010\Projects\DebrieferWeb\DataAccessLibrary\DebriefDataService.cs:line 52
+at Spc.Ofp.Debriefer.Dal.Tests.BaseTest.Init() in C:\Users\coreyc\Documents\Visual Studio 2010\Projects\DebrieferWeb\DataAccessLibrary\Tests\BaseTest.cs:line 35
+--FluentConfigurationException
+at FluentNHibernate.Cfg.FluentConfiguration.BuildConfiguration() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 264
+at FluentNHibernate.Cfg.FluentConfiguration.BuildSessionFactory() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 230
+--MappingException
+at NHibernate.Cfg.Configuration.LogAndThrow(Exception exception)
+at NHibernate.Cfg.Configuration.AddDeserializedMapping(HbmMapping mappingDocument, String documentFileName)
+at NHibernate.Cfg.Configuration.ProcessMappingsQueue()
+at NHibernate.Cfg.Configuration.AddInputStream(Stream xmlInputStream, String name)
+at NHibernate.Cfg.Configuration.AddDocument(XmlDocument doc, String name)
+at NHibernate.Cfg.Configuration.AddDocument(XmlDocument doc)
+at FluentNHibernate.PersistenceModel.Configure(Configuration cfg) in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 289
+at FluentNHibernate.Cfg.MappingConfiguration.Apply(Configuration cfg) in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\MappingConfiguration.cs:line 87
+at FluentNHibernate.Cfg.FluentConfiguration.BuildConfiguration() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 249
+--MappingException
+at NHibernate.Cfg.XmlHbmBinding.Binder.ClassForFullNameChecked(String fullName, String errorMessage)
+at NHibernate.Cfg.XmlHbmBinding.ClassBinder.BindClass(IEntityMapping classMapping, PersistentClass model, IDictionary`2 inheritedMetas)
+at NHibernate.Cfg.XmlHbmBinding.RootClassBinder.Bind(HbmClass classSchema, IDictionary`2 inheritedMetas)
+at NHibernate.Cfg.XmlHbmBinding.MappingRootBinder.AddEntitiesMappings(HbmMapping mappingSchema, IDictionary`2 inheritedMetas)
+at NHibernate.Cfg.XmlHbmBinding.MappingRootBinder.Bind(HbmMapping mappingSchema)
+at NHibernate.Cfg.Configuration.AddDeserializedMapping(HbmMapping mappingDocument, String documentFileName)
+--FileNotFoundException
+at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+at System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection, Boolean suppressSecurityChecks)
+at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+at System.Reflection.Assembly.Load(String assemblyString)
+at NHibernate.Util.ReflectHelper.TypeFromAssembly(AssemblyQualifiedTypeName name, Boolean throwOnError)
+at NHibernate.Cfg.XmlHbmBinding.Binder.ClassForFullNameChecked(String fullName, String errorMessage)
+]]></stack-trace>
+                            </failure>
+                            <results>
+                              <test-case name="Spc.Ofp.Debriefer.Dal.Tests.QuestionTest.TestGetAllQuestions" executed="True" result="Failure" success="False" time="0.000" asserts="0">
+                                <failure>
+                                  <message><![CDATA[TestFixtureSetUp failed in QuestionTest]]></message>
+                                  <stack-trace />
+                                </failure>
+                              </test-case>
+                              <test-case name="Spc.Ofp.Debriefer.Dal.Tests.QuestionTest.TestGetPurseSeineQuestions" executed="True" result="Failure" success="False" time="0.000" asserts="0">
+                                <failure>
+                                  <message><![CDATA[TestFixtureSetUp failed in QuestionTest]]></message>
+                                  <stack-trace />
+                                </failure>
+                              </test-case>
+                              <test-case name="Spc.Ofp.Debriefer.Dal.Tests.QuestionTest.TestGetQuestion" executed="True" result="Failure" success="False" time="0.000" asserts="0">
+                                <failure>
+                                  <message><![CDATA[TestFixtureSetUp failed in QuestionTest]]></message>
+                                  <stack-trace />
+                                </failure>
+                              </test-case>
+                            </results>
+                          </test-suite>
+                          <test-suite type="TestFixture" name="VesselTest" executed="True" result="Error" success="False" time="0.031" asserts="0">
+                            <failure>
+                              <message><![CDATA[SetUp : FluentNHibernate.Cfg.FluentConfigurationException : An invalid or incomplete configuration was used while creating a SessionFactory. Check PotentialReasons collection, and InnerException for more detail.
+
+
+  ----> FluentNHibernate.Cfg.FluentConfigurationException : An invalid or incomplete configuration was used while creating a SessionFactory. Check PotentialReasons collection, and InnerException for more detail.
+
+
+  ----> NHibernate.MappingException : Could not compile the mapping document: (XmlDocument)
+  ----> NHibernate.MappingException : persistent class Spc.Ofp.Debriefer.Dal.Entities.Category, DebrieferDal, Version=1.0.0.0, Culture=en, PublicKeyToken=null not found
+  ----> System.IO.FileNotFoundException : Could not load file or assembly 'DebrieferDal, Version=1.0.0.0, Culture=en, PublicKeyToken=null' or one of its dependencies. The system cannot find the file specified.]]></message>
+                              <stack-trace><![CDATA[at FluentNHibernate.Cfg.FluentConfiguration.BuildSessionFactory() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 235
+at Spc.Ofp.Debriefer.Dal.DebriefDataService.CreateSessionFactory() in c:\users\coreyc\documents\visual studio 2010\Projects\DebrieferWeb\DataAccessLibrary\DebriefDataService.cs:line 96
+at Spc.Ofp.Debriefer.Dal.DebriefDataService.get_SessionFactory() in c:\users\coreyc\documents\visual studio 2010\Projects\DebrieferWeb\DataAccessLibrary\DebriefDataService.cs:line 46
+at Spc.Ofp.Debriefer.Dal.DebriefDataService.GetSession() in c:\users\coreyc\documents\visual studio 2010\Projects\DebrieferWeb\DataAccessLibrary\DebriefDataService.cs:line 52
+at Spc.Ofp.Debriefer.Dal.Tests.BaseTest.Init() in C:\Users\coreyc\Documents\Visual Studio 2010\Projects\DebrieferWeb\DataAccessLibrary\Tests\BaseTest.cs:line 35
+--FluentConfigurationException
+at FluentNHibernate.Cfg.FluentConfiguration.BuildConfiguration() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 264
+at FluentNHibernate.Cfg.FluentConfiguration.BuildSessionFactory() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 230
+--MappingException
+at NHibernate.Cfg.Configuration.LogAndThrow(Exception exception)
+at NHibernate.Cfg.Configuration.AddDeserializedMapping(HbmMapping mappingDocument, String documentFileName)
+at NHibernate.Cfg.Configuration.ProcessMappingsQueue()
+at NHibernate.Cfg.Configuration.AddInputStream(Stream xmlInputStream, String name)
+at NHibernate.Cfg.Configuration.AddDocument(XmlDocument doc, String name)
+at NHibernate.Cfg.Configuration.AddDocument(XmlDocument doc)
+at FluentNHibernate.PersistenceModel.Configure(Configuration cfg) in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 289
+at FluentNHibernate.Cfg.MappingConfiguration.Apply(Configuration cfg) in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\MappingConfiguration.cs:line 87
+at FluentNHibernate.Cfg.FluentConfiguration.BuildConfiguration() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 249
+--MappingException
+at NHibernate.Cfg.XmlHbmBinding.Binder.ClassForFullNameChecked(String fullName, String errorMessage)
+at NHibernate.Cfg.XmlHbmBinding.ClassBinder.BindClass(IEntityMapping classMapping, PersistentClass model, IDictionary`2 inheritedMetas)
+at NHibernate.Cfg.XmlHbmBinding.RootClassBinder.Bind(HbmClass classSchema, IDictionary`2 inheritedMetas)
+at NHibernate.Cfg.XmlHbmBinding.MappingRootBinder.AddEntitiesMappings(HbmMapping mappingSchema, IDictionary`2 inheritedMetas)
+at NHibernate.Cfg.XmlHbmBinding.MappingRootBinder.Bind(HbmMapping mappingSchema)
+at NHibernate.Cfg.Configuration.AddDeserializedMapping(HbmMapping mappingDocument, String documentFileName)
+--FileNotFoundException
+at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+at System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection, Boolean suppressSecurityChecks)
+at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+at System.Reflection.Assembly.Load(String assemblyString)
+at NHibernate.Util.ReflectHelper.TypeFromAssembly(AssemblyQualifiedTypeName name, Boolean throwOnError)
+at NHibernate.Cfg.XmlHbmBinding.Binder.ClassForFullNameChecked(String fullName, String errorMessage)
+]]></stack-trace>
+                            </failure>
+                            <results>
+                              <test-case name="Spc.Ofp.Debriefer.Dal.Tests.VesselTest.TestGetVessel" executed="True" result="Failure" success="False" time="0.000" asserts="0">
+                                <failure>
+                                  <message><![CDATA[TestFixtureSetUp failed in VesselTest]]></message>
+                                  <stack-trace />
+                                </failure>
+                              </test-case>
+                            </results>
+                          </test-suite>
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>
