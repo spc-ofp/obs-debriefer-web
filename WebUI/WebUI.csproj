@@ -108,6 +108,8 @@
     <Content Include="Content\bootstrap-responsive.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\datetimepicker.css" />
+    <Content Include="Content\images\calendar-icon.png" />
     <Content Include="Content\images\flags\ad.png" />
     <Content Include="Content\images\flags\ae.png" />
     <Content Include="Content\images\flags\af.png" />
@@ -435,7 +437,6 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Content\Site.css" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />

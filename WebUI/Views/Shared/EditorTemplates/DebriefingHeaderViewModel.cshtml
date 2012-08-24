@@ -1,152 +1,60 @@
 ﻿@model WebUI.Models.DebriefingHeaderViewModel
+ 
+@Html.LabelFor(m => m.Version)
+@Html.DropDownListFor(m => m.Version, new SelectList(Enum.GetValues(typeof(Spc.Ofp.Debriefer.Dal.Common.WorkbookVersion))), "Choose")
+@Html.ValidationMessageFor(m => m.Version)
+@Html.HiddenFor(m => m.PreviousVersion)
+@Html.HiddenFor(m => m.PositiveActionResponse) 
+  
+@Html.LabelFor(m => m.GearCode)
+@Html.DropDownListFor(m => m.GearCode, new SelectList(WebUI.Models.DebriefingHeaderViewModel.GearTypes, "Code", "Label"), "Choose") 
+@Html.ValidationMessageFor(m => m.GearCode)
+@Html.HiddenFor(m => m.PreviousGearCode)         
+           
+@* Use a hidden field for the staff code -- the full name field is for actual entry *@
+@Html.LabelFor(m => m.ObserverCode)
+@Html.HiddenFor(m => m.ObserverCode)
+@Html.TextBoxFor(m => m.ObserverFullName, new { placeholder = "Enter the observer's name"})
+<span class="help-inline">@Html.ValidationMessageFor(m => m.ObserverCode)</span>
 
-@if (ViewData["flash"] != null)
-{
-    var alertLevel = ViewData["flash-level"] ?? "alert-error";
-<div class="alert @alertLevel">
-    @ViewData["flash"]
-</div>
-}
+@Html.LabelFor(m => m.DepartureDate, "Departure Date (dd-mm-yy HH:mm)")
+@Html.TextBoxFor(m => m.DepartureDate, new { @class = "datetime", required = String.Empty })
+<span class="help-inline">@Html.ValidationMessageFor(m => m.DepartureDate)</span>
 
-@using (Html.BeginForm())
-{
-    @Html.ValidationSummary(true, "Save failed")
-    <table style="width: auto;">
-        <tbody>
-            <tr>
-                <td class="label">Observer:</td>
-                <td>@Html.TextBoxFor(m => m.ObserverCode) @Html.ValidationMessageFor(m => m.ObserverCode)</td>
-                <td class="label">Trip Number:</td>
-                <td>@Html.TextBoxFor(m => m.TripNumber) @Html.ValidationMessageFor(m => m.TripNumber)</td>            
-            </tr>
-            <tr>           
-                <td class="label">Vessel:</td>
-                <td>
-                    @Html.HiddenFor(m => m.VesselId) 
-                    @Html.TextBoxFor(m => m.VesselName) 
-                    @Html.ValidationMessageFor(m => m.VesselId)
-                </td>
-                <td class="label">Gear Code:</td>
-                <td>
-                    @Html.DropDownListFor(m => m.GearCode, new SelectList(WebUI.Models.DebriefingHeaderViewModel.GearTypes, "Code", "Label"), "Choose") 
-                    @Html.ValidationMessageFor(m => m.GearCode)
-                    @Html.HiddenFor(m => m.PreviousGearCode)
-                </td>
-            </tr>
-            <tr>
-                <td class="label">Program Code:</td>
-                <td>
-                    @Html.DropDownListFor(m => m.ProgramCode, new SelectList(Enum.GetValues(typeof(Spc.Ofp.Debriefer.Dal.Common.ObserverProgram))), "Choose")
-                    @Html.ValidationMessageFor(m => m.ProgramCode)
-                </td>
-                <td class="label">Country Code:</td>
-                <td>@Html.TextBoxFor(m => m.CountryCode)</td>
-            </tr>
-            <tr>
-                <td class="label">Departure Date:</td>
-                <td>@Html.TextBoxFor(m => m.DepartureDate, new { @class = "date" }) @Html.ValidationMessageFor(m => m.DepartureDate)</td>
-                <td class="label">Departure Port:</td>
-                <td>
-                    @Html.HiddenFor(m => m.DeparturePortId)
-                    @Html.TextBoxFor(m => m.DeparturePort) 
-                    @Html.ValidationMessageFor(m => m.DeparturePortId)
-                </td>            
-            </tr>
-            <tr>
-                <td class="label">Return Date:</td>
-                <td>@Html.TextBoxFor(m => m.ReturnDate, new { @class = "date" }) @Html.ValidationMessageFor(m => m.ReturnDate)</td>
-                <td class="label">Return Port:</td>
-                <td>
-                    @Html.HiddenFor(m => m.ReturnPortId) 
-                    @Html.TextBoxFor(m => m.ReturnPort) 
-                    @Html.ValidationMessageFor(m => m.ReturnPortId)
-                </td>            
-            </tr>
-            <tr>
-                <td class="label">Start Date:</td>
-                <td>@Html.TextBoxFor(m => m.StartTime, new { @class = "date" }) @Html.ValidationMessageFor(m => m.StartTime)</td>
-                <td class="label">End Date:</td>
-                <td>@Html.TextBoxFor(m => m.EndTime, new { @class = "date" })</td>            
-            </tr>
-            <tr>
-                <td class="label">Debriefer:</td>
-                <td>@Html.TextBoxFor(m => m.DebrieferCode) @Html.ValidationMessageFor(m => m.DebrieferCode)</td>
-                <td class="label">Version:</td>
-                <td>
-                    @Html.DropDownListFor(m => m.Version, new SelectList(Enum.GetValues(typeof(Spc.Ofp.Debriefer.Dal.Common.WorkbookVersion))), "Choose")
-                    @Html.ValidationMessageFor(m => m.Version)
-                    @Html.HiddenFor(m => m.PreviousVersion)
-                    @Html.HiddenFor(m => m.PositiveActionResponse)
-                </td>            
-            </tr>
-            <tr>
-                <td class="label">Comments:</td>
-                <td colspan="3">@Html.TextAreaFor(m => m.Comments)</td>
-            </tr>
-        </tbody>
-    </table>
-    
-    <p>
-        <input type="submit" value="Save" />
-        <input type="reset" value="Cancel" />
-    </p>
-}
+@Html.LabelFor(m => m.DeparturePortId)
+@Html.HiddenFor(m => m.DeparturePortId)
+@Html.TextBoxFor(m => m.DeparturePort, new { placeholder = "Enter departure port name" })
+<span class="help-inline">@Html.ValidationMessageFor(m => m.DeparturePortId)</span>
 
-<script>
-    $(function () {
-        $(".date").datetimepicker({ dateFormat: 'dd/mm/yy'});
-    });
+@Html.LabelFor(m => m.TripNumber)
+@Html.TextBoxFor(m => m.TripNumber, new { required = String.Empty })
+<span class="help-inline">@Html.ValidationMessageFor(m => m.TripNumber)</span>
 
-    $(function () {
-        var autocompleteUrl = '@Url.Action("Find", "Vessel")';
-        $("#VesselName").autocomplete({
-            minLength: 2,
-            source: autocompleteUrl,
-            select: function (event, ui) {
-                $("#VesselName").val(ui.item.label);
-                $("#VesselId").val(ui.item.id);
-                $("#GearCode").val(ui.item.GearType);
-            }
-        });
-    });
+@Html.LabelFor(m => m.ReturnDate, "Return Date (dd-mm-yy HH:mm)")
+@Html.TextBoxFor(m => m.ReturnDate, new { @class = "datetime", required = String.Empty })
+<span class="help-inline">@Html.ValidationMessageFor(m => m.ReturnDate)</span>
 
-    $(function () {
-        var autocompleteUrl = '@Url.Action("Find", "Staff")';
-        $("#ObserverCode").autocomplete({
-            minLength: 2,
-            source: autocompleteUrl,
-        });
-    });
+@Html.LabelFor(m => m.ReturnPortId)
+@Html.HiddenFor(m => m.ReturnPortId)
+@Html.TextBoxFor(m => m.ReturnPort, new { placeholder = "Enter return port name" })
+<span class="help-inline">@Html.ValidationMessageFor(m => m.ReturnPortId)</span>
 
-    $(function () {
-        var autocompleteUrl = '@Url.Action("Find", "Staff")';
-        $("#DebrieferCode").autocomplete({
-            minLength: 2,
-            source: autocompleteUrl,
-        });
-    });
+@Html.LabelFor(m => m.DebrieferCode)
+@Html.HiddenFor(m => m.DebrieferCode)
+@Html.TextBoxFor(m => m.DebrieferFullName, new { placeholder = "Enter the debriefer's name" })
+<span class="help-inline">@Html.ValidationMessageFor(m => m.DebrieferCode)</span>
 
-    $(function () {
-        var autocompleteUrl = '@Url.Action("Find", "Port")';
-        $("#DeparturePort").autocomplete({
-            minLength: 2,
-            source: autocompleteUrl,
-            select: function (event, ui) {
-                $("#DeparturePort").val(ui.item.label);
-                $("#DeparturePortId").val(ui.item.id);
-            }
-        });
-    });
+@Html.LabelFor(m => m.ProgramCode)
+@Html.DropDownListFor(m => m.ProgramCode, new SelectList(Enum.GetValues(typeof(Spc.Ofp.Debriefer.Dal.Common.ObserverProgram))), "Choose")
+<span class="help-inline">@Html.ValidationMessageFor(m => m.ProgramCode)</span>
 
-    $(function () {
-        var autocompleteUrl = '@Url.Action("Find", "Port")';
-        $("#ReturnPort").autocomplete({
-            minLength: 2,
-            source: autocompleteUrl,
-            select: function (event, ui) {
-                $("#ReturnPort").val(ui.item.label);
-                $("#ReturnPortId").val(ui.item.id);
-            }
-        });
-    });
-</script>
+@Html.LabelFor(m => m.StartTime, "Start Date (dd-mm-yy HH:mm)")
+@Html.TextBoxFor(m => m.StartTime, new { @class = "datetime" })
+<span class="help-inline">@Html.ValidationMessageFor(m => m.StartTime)</span>
+
+@Html.LabelFor(m => m.EndTime, "End Date (dd-mm-yy HH:mm)")
+@Html.TextBoxFor(m => m.EndTime, new { @class = "datetime" })
+<span class="help-inline">@Html.ValidationMessageFor(m => m.EndTime)</span>
+
+@Html.LabelFor(m => m.Comments)
+@Html.TextAreaFor(m => m.Comments, new { rows = 4 })

@@ -48,6 +48,9 @@ namespace WebUI.Models
         [Display(Name = "Observer")]
         public string ObserverCode { get; set; }
 
+        [Display(Name = "Observer")]
+        public string ObserverFullName { get; set; }
+
         [Required]
         [Display(Name = "Vessel")]
         public int VesselId { get; set; }
@@ -96,6 +99,9 @@ namespace WebUI.Models
         [Required]
         [Display(Name = "Debriefer")]
         public string DebrieferCode { get; set; }
+
+        [Display(Name = "Debriefer")]
+        public string DebrieferFullName { get; set; }
 
         [Required]
         [Display(Name = "Start Date")]
