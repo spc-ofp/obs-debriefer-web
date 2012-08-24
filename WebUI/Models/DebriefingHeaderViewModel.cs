@@ -55,7 +55,13 @@ namespace WebUI.Models
         /// <summary>
         /// Gets or sets vessel name
         /// </summary>
+        [Display(Name = "Vessel Name")]
         public string VesselName { get; set; }
+
+        /// <summary>
+        /// Gets or sets vessel's registered country code
+        /// </summary>
+        public string VesselCountryCode { get; set; }
 
         [Required]
         [Display(Name = "Program Code")]
@@ -73,6 +79,7 @@ namespace WebUI.Models
         [Display(Name = "Departure Port")]
         public int DeparturePortId { get; set; }
 
+        [Display(Name = "Departure Port")]
         public string DeparturePort { get; set; }
 
         [Required]
@@ -83,6 +90,7 @@ namespace WebUI.Models
         [Display(Name = "Return Port")]
         public int ReturnPortId { get; set; }
 
+        [Display(Name = "Return Port")]
         public string ReturnPort { get; set; }
 
         [Required]

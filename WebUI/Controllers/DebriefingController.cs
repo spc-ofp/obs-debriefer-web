@@ -23,14 +23,13 @@ namespace WebUI.Controllers
      * along with TUBS.  If not, see <http://www.gnu.org/licenses/>.
      */
     using System;
+    using System.Collections.Generic;
     using System.Linq;
     using System.Web.Mvc;
     using Spc.Ofp.Debriefer.Dal;
-    using Spc.Ofp.Debriefer.Dal.Common;
     using Spc.Ofp.Debriefer.Dal.Entities;
     using WebUI.Models;
     using WebUI.Models.ExtensionMethods;
-    using System.Collections.Generic;
     
     public class DebriefingController : Controller
     {        

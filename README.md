@@ -10,3 +10,10 @@ of trip debriefing in two scenarios:
 The web application is written in C# and uses Microsoft's MVC3 framework for the
 presentation layer.  The data access layer uses Fluent NHibernate with a SQL Server
 data store.
+
+The following tasks have yet to be completed:
+
++ Adding a positive action modal dialog when changing gear type and/or workbook version
++ Adding a disclaimer regarding data ownership
++ Security
++ i18n work.  A resource holding field names exists, but nothing has been done to integrate it into the web tier

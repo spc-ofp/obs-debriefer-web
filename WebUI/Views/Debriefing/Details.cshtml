@@ -2,70 +2,75 @@
 
 <h2>Debriefing Summary</h2>
 
-<table style="width: auto;">
-    <tbody>
-        <tr>
-            <td class="label">Observer:</td>
-            <td>@Html.DisplayFor(m => m.ObserverCode)</td>
-            <td class="label">Trip Number:</td>
-            <td>@Html.DisplayFor(m => m.TripNumber)</td>            
-        </tr>
-        <tr>           
-            <td class="label">Vessel:</td>
-            <td>@Html.DisplayFor(m => m.VesselName)</td>
-            <td class="label">Gear Code:</td>
-            <td>@Html.DisplayFor(m => m.GearCode)</td>
-        </tr>
-        <tr>
-            <td class="label">Program Code:</td>
-            <td>@Html.DisplayFor(m => m.ProgramCode)</td>
-            <td class="label">Country Code:</td>
-            <td>@Html.DisplayFor(m => m.CountryCode)</td>
-        </tr>
-        <tr>
-            <td class="label">Departure Date:</td>
-            <td>@Html.DisplayFor(m => m.DepartureDate)</td>
-            <td class="label">Departure Port:</td>
-            <td>@Html.DisplayFor(m => m.DeparturePort)</td>            
-        </tr>
-        <tr>
-            <td class="label">Return Date:</td>
-            <td>@Html.DisplayFor(m => m.ReturnDate)</td>
-            <td class="label">Return Port:</td>
-            <td>@Html.DisplayFor(m => m.ReturnPort)</td>            
-        </tr>
-        <tr>
-            <td class="label">Start Date:</td>
-            <td>@Html.DisplayFor(m => m.StartTime)</td>
-            <td class="label">End Date:</td>
-            <td>@Html.DisplayFor(m => m.EndTime, new { format = "t" })</td>            
-        </tr>
-        <tr>
-            <td class="label">Debriefer:</td>
-            <td>@Html.DisplayFor(m => m.DebrieferCode)</td>
-            <td class="label">Version:</td>
-            <td>@Html.DisplayFor(m => m.Version)</td>            
-        </tr>
-        <tr>
-            <td class="label">Entered By:</td>
-            <td>@Html.DisplayFor(m => m.EnteredBy)</td>
-            <td class="label">Entered Date:</td>
-            <td>@Html.DisplayFor(m => m.EnteredDate)</td>            
-        </tr>
-        <tr>
-            <td class="label">Status:</td>
-            <td colspan="3">@Html.DisplayFor(m => m.Status)</td>
-        </tr>
-        <tr>
-            <td class="label">Comments:</td>
-            <td colspan="3">@Html.DisplayFor(m => m.Comments)</td>
-        </tr>
-    </tbody>
-</table>
+<div class="row">
+    <div class="span2">@Html.LabelFor(m => m.ObserverCode)</div>
+    <div class="span2">@Html.DisplayFor(m => m.ObserverCode)</div>
+    <div class="span2">@Html.LabelFor(m => m.TripNumber)</div>
+    <div class="span2">@Html.DisplayFor(m => m.TripNumber)</div>
+</div>
+
+<div class="row">
+    <div class="span2">@Html.LabelFor(m => m.VesselName)</div>
+    <div class="span2">
+        @if (!String.IsNullOrEmpty(Model.VesselCountryCode))
+        {
+            var imgLink = @Url.Content(String.Format("~/Content/images/flags/{0}.png", Model.VesselCountryCode.ToLower()));
+            <img src="@imgLink" alt="@Model.VesselCountryCode" title="@Model.VesselCountryCode" />
+        }
+        @Html.DisplayFor(m => m.VesselName)
+    </div>
+    <div class="span2">@Html.LabelFor(m => m.GearCode)</div>
+    <div class="span2">@Html.DisplayFor(m => m.GearCode)</div>
+</div>
+
+<div class="row">
+    <div class="span2">@Html.LabelFor(m => m.ProgramCode)</div>
+    <div class="span2">@Html.DisplayFor(m => m.ProgramCode)</div>
+    <div class="span2">@Html.LabelFor(m => m.CountryCode)</div>
+    <div class="span2">@Html.DisplayFor(m => m.CountryCode)</div>
+</div>
+
+<div class="row">
+    <div class="span2">@Html.LabelFor(m => m.DepartureDate)</div>
+    <div class="span2">@Html.DisplayFor(m => m.DepartureDate)</div>
+    <div class="span2">@Html.LabelFor(m => m.DeparturePort)</div>
+    <div class="span2">@Html.DisplayFor(m => m.DeparturePort)</div>
+</div>
+
+<div class="row">
+    <div class="span2">@Html.LabelFor(m => m.ReturnDate)</div>
+    <div class="span2">@Html.DisplayFor(m => m.ReturnDate)</div>
+    <div class="span2">@Html.LabelFor(m => m.ReturnPort)</div>
+    <div class="span2">@Html.DisplayFor(m => m.ReturnPort)</div>
+</div>
+
+<div class="row">
+    <div class="span2">@Html.LabelFor(m => m.StartTime)</div>
+    <div class="span2">@Html.DisplayFor(m => m.StartTime)</div>
+    <div class="span2">@Html.LabelFor(m => m.EndTime)</div>
+    <div class="span2">@Html.DisplayFor(m => m.EndTime, new { format = "t" })</div>
+</div>
+
+<div class="row">
+    <div class="span2">@Html.LabelFor(m => m.DebrieferCode)</div>
+    <div class="span2">@Html.DisplayFor(m => m.DebrieferCode)</div>
+    <div class="span2">@Html.LabelFor(m => m.Version)</div>
+    <div class="span2">@Html.DisplayFor(m => m.Version)</div>
+</div>
+
+<div class="row">
+    <div class="span2">@Html.LabelFor(m => m.Status)</div>
+    <div class="span6">@Html.DisplayFor(m => m.Status)</div>
+</div>
+
+<div class="row">
+    <div class="span2">@Html.LabelFor(m => m.Comments)</div>
+    <div class="span6">@Html.DisplayFor(m => m.Comments)</div>
+</div>
 
 <br />
 
-<table style="width: auto;">
+<table class="table table-bordered table-condensed table-striped" style="width:auto;">
     <thead>
         <tr>
             <th>&nbsp;</th>
@@ -78,7 +83,7 @@
     {
         <tr>
             <td>
-                <a href='@Url.RouteUrl("BySection", new { id = Model.Id, formType = @Url.Encode(sectionStatus.Name) })'>Display</a>
+                <a href='@Url.RouteUrl("BySection", new { id = Model.Id, formType = @Url.Encode(sectionStatus.Name) })'>Details</a>
                 @if (!Model.IsReadOnly)
                 {
                     <text>&nbsp;</text>

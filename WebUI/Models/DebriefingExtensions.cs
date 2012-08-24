@@ -233,6 +233,7 @@ namespace WebUI.Models.ExtensionMethods
                 dhvm.ObserverCode = debrief.Observer.StaffCode;
                 dhvm.VesselId = debrief.Vessel.Id;
                 dhvm.VesselName = debrief.Vessel.Name.Trim();
+                dhvm.VesselCountryCode = debrief.Vessel.CountryCode;
                 dhvm.ProgramCode = debrief.Program.ToString();
                 dhvm.GearCode = GearCodeFromVesselType(debrief.Vessel.VesselType);
                 dhvm.PreviousGearCode = dhvm.GearCode;

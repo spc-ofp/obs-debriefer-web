@@ -1,52 +1,24 @@
 ﻿@model IEnumerable<WebUI.Models.DebriefingHeaderViewModel>
 
-<script type="text/javascript">
-    $(document).ready(function () {
-        $("table > tbody tr:odd").css("background-color", "#FFFFCC");
-    });
-</script>
-
 <h2>@ViewBag.Title</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table>
+<table class="table table-bordered table-condensed table-striped" id="debriefingTable">
     <tr>
         <th></th>
-        <th>
-            Trip Number
-        </th>
-        <th>
-            Vessel
-        </th>
-        <th>
-            Departure Date
-        </th>
-        <th>
-            Return Date
-        </th>
-        <th>
-            Debriefer
-        </th>
-        <th>
-            Debrief Start
-        </th>
-        <th>
-            Debrief End
-        </th>
-        <th>
-            Status
-        </th>
-        <th>
-            Country Code
-        </th>
-        <th>
-            Entered By
-        </th>
-        <th>
-            Entered Date
-        </th>
+        <th>Trip Number</th>
+        <th>Vessel</th>
+        <th>Departure Date</th>
+        <th>Return Date</th>
+        <th>Debriefer</th>
+        <th>Debrief Start</th>
+        <th>Debrief End</th>
+        <th>Status</th>
+        <th>Country Code</th>
+        <th>Entered By</th>
+        <th>Entered Date</th>
     </tr>
 
 @foreach (var item in Model) {
@@ -64,13 +36,18 @@
             @Html.DisplayFor(modelItem => item.TripNumber)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.VesselName)
+            @if (!String.IsNullOrEmpty(item.VesselCountryCode))
+            {
+                var imgLink = @Url.Content(String.Format("~/Content/images/flags/{0}.png", item.VesselCountryCode.ToLower()));
+                <img src="@imgLink" alt="@item.VesselCountryCode" title="@item.VesselCountryCode" />
+            }
+            @Html.DisplayFor(i => item.VesselName)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.DepartureDate)
+            @Html.DisplayFor(modelItem => item.DepartureDate, new { format = "d" })
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.ReturnDate)
+            @Html.DisplayFor(modelItem => item.ReturnDate, new { format = "d" })
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.DebrieferCode)
@@ -91,7 +68,7 @@
             @Html.DisplayFor(modelItem => item.EnteredBy)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.EnteredDate)
+            @Html.DisplayFor(modelItem => item.EnteredDate, new { format = "d" })
         </td>
     </tr>
 }

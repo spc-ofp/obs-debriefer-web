@@ -1,8 +1,16 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Observer Debriefer";
 }
 
-<h2>@ViewBag.Message</h2>
-<p>
-    To learn more about ASP.NET MVC visit <a href="http://asp.net/mvc" title="ASP.NET MVC Website">http://asp.net/mvc</a>.
-</p>
+<div class="hero-unit">
+    <img src="@Url.Content("~/Content/images/spc_logo.png")" alt="spc_logo" style="float:left; margin-right: 10px; margin-left: 10px;" />
+    <h1>Observer Debriefer</h1>
+  <p>Welcome to the Observer Debriefer application, where you will be able to ...</p>
+  <br />
+  <br />
+  <br />
+  <br />
+  <p>
+    @Html.ActionLink("Start!", "Index", "Debriefing", null, new { @class="btn btn-primary btn-large" })
+  </p>
+</div>
