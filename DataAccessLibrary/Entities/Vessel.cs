@@ -34,5 +34,6 @@ namespace Spc.Ofp.Debriefer.Dal.Entities
         public virtual int Id { get; protected set; }
         public virtual VesselType VesselType { get; set; }
         public virtual string Name { get; set; }
+        public virtual string CountryCode { get; set; }
     }
 }

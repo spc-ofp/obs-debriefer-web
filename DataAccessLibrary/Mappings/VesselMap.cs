@@ -38,6 +38,7 @@ namespace Spc.Ofp.Debriefer.Dal.Mappings
             Id(x => x.Id, "vessel_id").GeneratedBy.Identity();
             Map(x => x.Name, "vessel_name");
             Map(x => x.VesselType, "vty_code");
+            Map(x => x.CountryCode, "reg_country_code");
         }
     }
 }
